@@ -169,6 +169,41 @@ impl ::Rasterize for Rasterizer {
                         self.get_font(&d, size)?
                     };
                     font.fallbacks.push(symbols);
+
+                    let knack = {
+                        let fallback_style = Style::Description { slant:Slant::Normal, weight:Weight::Normal  } ;
+                        let d = FontDesc::new("Knack Nerd Font".to_owned(), fallback_style);
+                        self.get_font(&d, size)?
+                    };
+                    font.fallbacks.push(knack);
+
+                    let icomoon = {
+                        let fallback_style = Style::Description { slant:Slant::Normal, weight:Weight::Normal  } ;
+                        let d = FontDesc::new("icomoon".to_owned(), fallback_style);
+                        self.get_font(&d, size)?
+                    };
+                    font.fallbacks.push(icomoon);
+
+                    let fawesome = {
+                        let fallback_style = Style::Description { slant:Slant::Normal, weight:Weight::Normal  } ;
+                        let d = FontDesc::new("FontAwesome".to_owned(), fallback_style);
+                        self.get_font(&d, size)?
+                    };
+                    font.fallbacks.push(fawesome);
+
+                    let pomodoro = {
+                        let fallback_style = Style::Description { slant:Slant::Normal, weight:Weight::Normal  } ;
+                        let d = FontDesc::new("Pomodoro".to_owned(), fallback_style);
+                        self.get_font(&d, size)?
+                    };
+                    font.fallbacks.push(pomodoro);
+
+                    let octicons = {
+                        let fallback_style = Style::Description { slant:Slant::Normal, weight:Weight::Normal  } ;
+                        let d = FontDesc::new("octicons".to_owned(), fallback_style);
+                        self.get_font(&d, size)?
+                    };
+                    font.fallbacks.push(octicons);
                 }
 
                 let key = FontKey::next();
